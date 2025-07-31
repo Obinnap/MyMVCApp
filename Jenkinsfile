@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOTNET_CLI_HOME = "${HOME}/.dotnet"
+       DOTNET_ROOT = "${HOME}/dotnet"
+       PATH = "${HOME}/dotnet:${env.PATH}"
     }
 
     stages {
